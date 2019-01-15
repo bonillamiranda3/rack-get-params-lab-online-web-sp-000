@@ -17,10 +17,9 @@ class Application
     elsif req.path.match(/cart/)
   @@cart.empty? ? resp.write("Your cart is empty") :@@cart.each {|item| resp.write("#{item}\n")}
     elsif req.path.match(/add/)
-    search_term = req.params["item"]
-    resp.write add_items_to_cart(search_term)
-
-
+      search_term = req.params["item"]
+      resp.write add_items_to_cart(search_term)
+    
     else
       resp.write "Path Not Found"
     end
