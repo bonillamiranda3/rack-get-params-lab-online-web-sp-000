@@ -42,6 +42,6 @@ def add_items_to_cart(search_term)
   return "added #{search_term}"
 else
   return "We don't have that item"
+    end
   end
-end
 end
